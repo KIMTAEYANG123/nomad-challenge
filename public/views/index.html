@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>챌린지</title>
+    <link rel="stylesheet" href="/css/index.css">
+
+</head>
+<body>
+    <h1>Hello!!</h1>
+
+    <script>
+        const screenSize = window.innerWidth;
+        const body = document.body;
+        const first = 'first';
+        const middle = 'middle';
+        const end = 'end';
+        screenChange(screenSize)
+        window.addEventListener('resize', ()=>{
+            const screenSize = window.innerWidth;
+            screenChange(screenSize)
+        });
+
+        function screenChange(screenSize){
+            if(screenSize >= 1500){
+                body.classList.add(first)
+                body.classList.remove(middle)
+                body.classList.remove(end)
+            }else if(screenSize < 1500 && screenSize > 1000){
+                body.classList.remove(first)
+                body.classList.add(middle)
+                body.classList.remove(end)
+            }else{
+                body.classList.remove(first)
+                body.classList.remove(middle)
+                body.classList.add(end)
+            }
+        }
+        
+    </script>
+</body>
+</html>
