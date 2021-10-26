@@ -4,10 +4,17 @@ const fs = require('fs')
 const port = 3000;
 
 
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname));
 
-app.get('/',(req,res)=>{
+app.get('/1',(req,res)=>{
     fs.readFile('./public/views/index.html', (err, data)=>{
+        res.type(`text/html`);
+        res.send(data);
+    });
+})
+
+app.get('/2',(req,res)=>{
+    fs.readFile('./public/views/2.html', (err, data)=>{
         res.type(`text/html`);
         res.send(data);
     });

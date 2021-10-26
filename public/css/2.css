@@ -1,0 +1,12 @@
+.nav {
+    display: flex;
+  }
+  h3,
+  h2,
+  p {
+    margin: 0;
+  }
+  .mar {
+    margin-top: 2rem;
+  }
+  
