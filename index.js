@@ -27,5 +27,13 @@ app.get('/3',(req,res)=>{
     });
 })
 
+app.get('/4',(req,res)=>{
+    fs.readFile('./public/views/4.html', (err, data)=>{
+        res.type(`text/html`);
+        res.send(data);
+    });
+})
+
+
 
 app.listen(port, ()=>{ console.log('서버를 킵니다.')})
