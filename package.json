@@ -1,7 +1,7 @@
 {
   "name": "nomad",
   "version": "1.0.0",
-  "description": "",
+  "description": "2주간 진행되는 노마드코더의 바닐라스크립트 챌린지",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KIMTAEYANG123/nomad-challenge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KIMTAEYANG123/nomad-challenge/issues"
+  },
+  "homepage": "https://github.com/KIMTAEYANG123/nomad-challenge#readme"
 }

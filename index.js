@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const fs = require('fs')
 const port = 3000;
 
@@ -29,6 +30,13 @@ app.get('/3',(req,res)=>{
 
 app.get('/4',(req,res)=>{
     fs.readFile('./public/views/4.html', (err, data)=>{
+        res.type(`text/html`);
+        res.send(data);
+    });
+})
+
+app.get('/5', cors(),(req,res)=>{
+    fs.readFile('./public/views/5.html', (err, data)=>{
         res.type(`text/html`);
         res.send(data);
     });
